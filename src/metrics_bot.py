@@ -30,11 +30,11 @@ def get_metrics():
     uptime = get_uptime()
 
     metrics = f"""📊 *Raspberry Pi Metrics - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}*
-🌡 Température : `{temp}` \n
-🖥 CPU usage : `{cpu_percent}%` \n
-🧠 RAM usage : `{ram.percent}%` ({round(ram.used / 1024**2)} MB used) \n
-💽 Disk usage : `{disk.percent}%` ({round(disk.used / 1024**3)} GB used) \n
-⏱ Uptime : `{uptime}` \n
+🌡 Température : `{temp}`
+🖥 CPU usage : `{cpu_percent}%`
+🧠 RAM usage : `{ram.percent}%` ({round(ram.used / 1024**2)} MB used)
+💽 Disk usage : `{disk.percent}%` ({round(disk.used / 1024**3)} GB used)
+⏱ Uptime : `{uptime}`
 📟 OS : `{platform.system()} {platform.release()}`
 """
     return metrics
